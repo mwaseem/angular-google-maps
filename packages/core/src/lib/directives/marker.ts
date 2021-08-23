@@ -83,6 +83,12 @@ export class AgmMarker implements OnDestroy, OnChanges, AfterContentInit, FitBou
   @Input() opacity = 1;
 
   /**
+   * Optimization enhances performance by rendering many markers as a single static element.
+   *  This is useful in cases where a large number of markers is required.
+   */
+  @Input() optimized = true;
+
+  /**
    * All markers are displayed on the map in order of their zIndex, with higher values displaying in
    * front of markers with lower values. By default, markers are displayed according to their
    * vertical position on screen, with lower markers appearing in front of markers further up the

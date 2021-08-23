@@ -88,6 +88,7 @@ export class MarkerManager {
         zIndex: marker.zIndex,
         title: marker.title,
         clickable: marker.clickable,
+        optimized: marker.optimized,
         animation: await this.convertAnimation(marker.animation),
       }).then(resolve));
     this._markers.set(marker, markerPromise);
